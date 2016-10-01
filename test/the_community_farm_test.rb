@@ -20,8 +20,8 @@ describe 'TheCommunityFarm' do
         subject.id.must_equal '9a606eed390f8788a82b557b5c9cbeeb'
       end
 
-      it 'has a title' do
-        subject.title.must_equal 'Family Provider'
+      it 'has a type' do
+        subject.type.must_equal 'Family Provider'
       end
 
       it 'has a size' do
