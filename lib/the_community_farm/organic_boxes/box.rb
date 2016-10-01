@@ -30,8 +30,12 @@ module TheCommunityFarm
         @items ||= item_doc.css('li').map { |li| li.text.strip }
       end
 
-      def to_s
+      def name
         "#{type} #{box_size}".strip
+      end
+
+      def to_s
+        name
       end
 
       private
