@@ -1,8 +1,6 @@
 # TheCommunityFarm
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/the_community_farm`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This RubyGem provides a way to access the contents of various veg boxes from [The Community Farm](https://www.thecommunityfarm.co.uk/) in your Ruby programs. I use it to generate an XML feed of the various boxes which I can then plug into an IFTTT recipe which emails me when the weekly box contents is updated.
 
 ## Installation
 
@@ -32,10 +30,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/the_community_farm.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/chrismytton/the_community_farm.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
