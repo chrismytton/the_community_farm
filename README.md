@@ -22,13 +22,63 @@ Or install it yourself as:
 
 ```ruby
 require 'the_community_farm'
+require 'open-uri'
 
-farm_api = TheCommunityFarm.new(html: open('https://www.thecommunityfarm.co.uk/boxes/box_display.php').read)
+organic_boxes = TheCommunityFarm::OrganicBoxes.new(html: open('https://www.thecommunityfarm.co.uk/boxes/box_display.php').read)
 
-farm_api.organic_boxes.each do |box|
+organic_boxes.each do |box|
   puts box
+  puts
   box.items.each { |item| puts "- #{item}" }
+  puts
 end
+```
+
+Which will output:
+
+```
+All For One
+
+- Potatoes (Valor) (Somerset)
+- Carrots (Dirty) (Somerset)
+- Cauliflower (Green) (Somerset)
+- Cabbage (Pointed) (Cornwall)
+- Leeks (Our Field)
+- Sweetcorn (Somerset)
+- Chillies (Our Field)
+
+Family Provider Large
+
+- Potatoes (Valor) (Somerset)
+- Carrots (Dirty) (Somerset)
+- Parsnips (Somerset)
+- Cauliflower (Green) (Somerset)
+- Brussel Sprout Tops (Somerset)
+- Cabbage (White) (Our Field)
+- Butternut Squash (Somerset)
+- Leeks (our field)
+- Sweetcorn (Somerset)
+- Beetroot (Somerset)
+- Apples  (Hereford)
+- Bananas (Ecuador)
+- Oranges (SPA)
+
+Family Provider Small
+
+- Potatoes (Valor) (Somerset)
+- Carrots (Dirty) (Somerset)
+- Parsnips (Somerset)
+- Cauliflower (Green) (Somerset)
+- Leeks (our field)
+- Sweetcorn (Somerset)
+- Onions (Somerset)
+- Chard (Rainbow) (Our Field)
+- Chillies (Our field)
+- Apples (Hereford)
+- Bananas (Ecuador)
+- Oranges (SPA)
+
+[snip]
 ```
 
 ## Development
