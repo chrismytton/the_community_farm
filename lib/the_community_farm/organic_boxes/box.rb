@@ -2,6 +2,7 @@ require 'digest'
 
 module TheCommunityFarm
   class OrganicBoxes
+    # Represents a single organic veg box.
     class Box
       def initialize(noko:)
         @noko = noko

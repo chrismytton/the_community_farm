@@ -2,6 +2,7 @@ require 'nokogiri'
 require 'the_community_farm/organic_boxes/box'
 
 module TheCommunityFarm
+  # Represents a list of organic veg boxes.
   class OrganicBoxes
     include Enumerable
 
