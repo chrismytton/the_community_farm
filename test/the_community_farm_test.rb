@@ -34,19 +34,19 @@ describe 'TheCommunityFarm' do
 
       it 'has a list of items' do
         subject.items.must_equal [
-          "Potatoes (Valor) (Somerset)",
-          "Carrots (Dirty) (Somerset)",
-          "Parsnips (Somerset)",
-          "Cauliflower (Green) (Somerset)",
-          "Brussel Sprout Tops (Somerset)",
-          "Cabbage (White) (Our Field)",
-          "Butternut Squash (Somerset)",
-          "Leeks (our field)",
-          "Sweetcorn (Somerset)",
-          "Beetroot (Somerset)",
-          "Apples  (Hereford)",
-          "Bananas (Ecuador)",
-          "Oranges (SPA)"
+          'Potatoes (Valor) (Somerset)',
+          'Carrots (Dirty) (Somerset)',
+          'Parsnips (Somerset)',
+          'Cauliflower (Green) (Somerset)',
+          'Brussel Sprout Tops (Somerset)',
+          'Cabbage (White) (Our Field)',
+          'Butternut Squash (Somerset)',
+          'Leeks (our field)',
+          'Sweetcorn (Somerset)',
+          'Beetroot (Somerset)',
+          'Apples  (Hereford)',
+          'Bananas (Ecuador)',
+          'Oranges (SPA)'
         ]
       end
     end
