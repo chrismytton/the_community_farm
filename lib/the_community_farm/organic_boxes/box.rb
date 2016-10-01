@@ -19,7 +19,10 @@ module TheCommunityFarm
       end
 
       def box_size
-        @box_size ||= noko.at_css('option[selected]')&.text&.strip
+        @box_size ||= begin
+          size = noko.at_css('option[selected]')
+          size && size.text && size.text.strip
+        end
       end
 
       def items
