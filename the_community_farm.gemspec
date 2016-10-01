@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['chrismytton@gmail.com']
 
   spec.summary       = 'Unofficial API for The Community Farm Bristol'
-  spec.homepage      = 'https://github.com/chrismytton/the_community_farm'
+  spec.homepage      = 'https://github.com/communityfarm/the_community_farm'
   spec.license       = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
