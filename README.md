@@ -20,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'the_community_farm'
+
+farm_api = TheCommunityFarm.new(html: open('https://www.thecommunityfarm.co.uk/boxes/box_display.php').read)
+
+farm_api.organic_boxes.each do |box|
+  puts box
+  box.items.each { |item| puts "- #{item}" }
+end
+```
 
 ## Development
 
