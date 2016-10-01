@@ -28,8 +28,12 @@ describe 'TheCommunityFarm' do
         subject.box_size.must_equal 'Large'
       end
 
-      it 'has a to_s method which combines the title and size' do
-        subject.to_s.must_equal 'Family Provider Large'
+      it 'has a name method which combines the title and size' do
+        subject.name.must_equal 'Family Provider Large'
+      end
+
+      it 'has a to_s method that returns the name' do
+        subject.to_s.must_equal subject.name
       end
 
       it 'has a list of items' do
