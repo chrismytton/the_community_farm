@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/communityfarm/the_community_farm/compare/v0.1.0...HEAD)
 
+## [0.2.0](https://github.com/communityfarm/the_community_farm/compare/v0.1.0...v0.2.0) 2016-10-01
+
 ### Added
 
 - There is now a `Box#name` method that returns the box type and the box size.
