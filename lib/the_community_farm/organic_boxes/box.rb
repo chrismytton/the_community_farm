@@ -10,13 +10,13 @@ module TheCommunityFarm
 
       def id
         Digest::MD5.new.tap do |id|
-          id.update(title)
+          id.update(type)
           id.update(items.join("\n"))
         end.hexdigest
       end
 
-      def title
-        @title ||= noko.at_css('.lead').text.strip
+      def type
+        @type ||= noko.at_css('.lead').text.strip
       end
 
       def box_size
@@ -31,7 +31,7 @@ module TheCommunityFarm
       end
 
       def to_s
-        "#{title} #{box_size}".strip
+        "#{type} #{box_size}".strip
       end
 
       private
