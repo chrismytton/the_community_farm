@@ -15,6 +15,10 @@ module TheCommunityFarm
         end.hexdigest
       end
 
+      def name
+        "#{type} #{box_size}".strip
+      end
+
       def type
         @type ||= noko.at_css('.lead').text.strip
       end
@@ -30,12 +34,18 @@ module TheCommunityFarm
         @items ||= item_doc.css('li').map { |li| li.text.strip }
       end
 
-      def name
-        "#{type} #{box_size}".strip
-      end
-
       def to_s
         name
+      end
+
+      def to_h
+        {
+          id: id,
+          name: name,
+          type: type,
+          size: box_size,
+          items: items
+        }
       end
 
       private

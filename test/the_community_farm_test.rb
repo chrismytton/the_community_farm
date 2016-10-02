@@ -53,6 +53,30 @@ describe 'TheCommunityFarm' do
           'Oranges (SPA)'
         ]
       end
+
+      it 'has a #to_h method' do
+        subject.to_h.must_equal(
+          id: '9a606eed390f8788a82b557b5c9cbeeb',
+          name: 'Family Provider Large',
+          type: 'Family Provider',
+          size: 'Large',
+          items: [
+            'Potatoes (Valor) (Somerset)',
+            'Carrots (Dirty) (Somerset)',
+            'Parsnips (Somerset)',
+            'Cauliflower (Green) (Somerset)',
+            'Brussel Sprout Tops (Somerset)',
+            'Cabbage (White) (Our Field)',
+            'Butternut Squash (Somerset)',
+            'Leeks (our field)',
+            'Sweetcorn (Somerset)',
+            'Beetroot (Somerset)',
+            'Apples  (Hereford)',
+            'Bananas (Ecuador)',
+            'Oranges (SPA)'
+          ]
+        )
+      end
     end
   end
 end
