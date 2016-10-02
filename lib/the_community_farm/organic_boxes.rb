@@ -7,7 +7,7 @@ module TheCommunityFarm
     include Enumerable
 
     def initialize(html:)
-      @html = html
+      @boxes = Nokogiri::HTML(html).css('.panel').map { |p| Box.new(noko: p) }
     end
 
     def each(&block)
@@ -16,14 +16,6 @@ module TheCommunityFarm
 
     private
 
-    attr_reader :html
-
-    def boxes
-      noko.css('.panel').map { |p| Box.new(noko: p) }
-    end
-
-    def noko
-      @noko ||= Nokogiri::HTML(html)
-    end
+    attr_reader :boxes
   end
 end
