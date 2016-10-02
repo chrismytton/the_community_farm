@@ -38,6 +38,16 @@ module TheCommunityFarm
         name
       end
 
+      def to_h
+        {
+          id: id,
+          name: name,
+          type: type,
+          size: box_size,
+          items: items
+        }
+      end
+
       private
 
       attr_reader :noko
