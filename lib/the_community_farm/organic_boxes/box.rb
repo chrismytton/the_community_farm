@@ -34,6 +34,10 @@ module TheCommunityFarm
         @items ||= item_doc.css('li').map { |li| li.text.strip }
       end
 
+      def items_sha
+        @items_sha ||= Digest::SHA1.hexdigest(items.join("\n"))
+      end
+
       def to_s
         name
       end

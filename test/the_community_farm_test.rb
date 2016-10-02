@@ -36,6 +36,10 @@ describe 'TheCommunityFarm' do
         subject.to_s.must_equal subject.name
       end
 
+      it 'has an item sha' do
+        subject.items_sha.must_equal '311fc748548acb075d123faab87e50e4c64a22b8'
+      end
+
       it 'has a list of items' do
         subject.items.must_equal [
           'Potatoes (Valor) (Somerset)',
