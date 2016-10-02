@@ -8,15 +8,8 @@ module TheCommunityFarm
         @noko = noko
       end
 
-      def id
-        Digest::MD5.new.tap do |id|
-          id.update(type)
-          id.update(items.join("\n"))
-        end.hexdigest
-      end
-
       def name
-        "#{type} #{box_size}".strip
+        @name ||= "#{type} #{box_size}".strip
       end
 
       def type
@@ -34,17 +27,21 @@ module TheCommunityFarm
         @items ||= item_doc.css('li').map { |li| li.text.strip }
       end
 
+      def items_sha
+        @items_sha ||= Digest::SHA1.hexdigest(items.join("\n"))
+      end
+
       def to_s
         name
       end
 
       def to_h
         {
-          id: id,
           name: name,
           type: type,
           size: box_size,
-          items: items
+          items: items,
+          items_sha: items_sha
         }
       end
 

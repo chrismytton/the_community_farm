@@ -16,10 +16,6 @@ describe 'TheCommunityFarm' do
     describe 'Box' do
       subject { boxes.to_a[1] }
 
-      it 'has an id' do
-        subject.id.must_equal '9a606eed390f8788a82b557b5c9cbeeb'
-      end
-
       it 'has a type' do
         subject.type.must_equal 'Family Provider'
       end
@@ -34,6 +30,10 @@ describe 'TheCommunityFarm' do
 
       it 'has a to_s method that returns the name' do
         subject.to_s.must_equal subject.name
+      end
+
+      it 'has an item sha' do
+        subject.items_sha.must_equal '311fc748548acb075d123faab87e50e4c64a22b8'
       end
 
       it 'has a list of items' do
@@ -56,7 +56,6 @@ describe 'TheCommunityFarm' do
 
       it 'has a #to_h method' do
         subject.to_h.must_equal(
-          id: '9a606eed390f8788a82b557b5c9cbeeb',
           name: 'Family Provider Large',
           type: 'Family Provider',
           size: 'Large',
@@ -74,7 +73,8 @@ describe 'TheCommunityFarm' do
             'Apples  (Hereford)',
             'Bananas (Ecuador)',
             'Oranges (SPA)'
-          ]
+          ],
+          items_sha: '311fc748548acb075d123faab87e50e4c64a22b8'
         )
       end
     end
